@@ -6,7 +6,7 @@ An API service that takes any python script as input and returns the result of t
 
 1. Build: `docker build --target development -t run-py-service .`
 
-2. Run: `docker run -d --name run-py-service -p 8080:8000 run-py-service`
+2. Run: `docker run -d --name run-py-service -p 8080:8080 run-py-service`
 
 ## Example
 
