@@ -1,0 +1,11 @@
+services:
+  run-py-service:
+    image: ${CONTAINER_REGISTRY}/run-py-service
+    container_name: run-py-service
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - ./.env
+    ports:
+      - ${PORT}:${PORT}

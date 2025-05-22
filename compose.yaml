@@ -1,0 +1,14 @@
+services:
+  run-py-service:
+    extends:
+      file: compose.prod.yaml
+      service: run-py-service
+    build:
+      target: development
+    develop:
+      watch:
+        - action: sync
+          path: ./
+          target: /app
+        - action: rebuild
+          path: ./requirements.txt
